@@ -1,0 +1,16 @@
+/node_modules
+/storage/logs
+/storage/logs/*.log
+/public/upload
+/vendor
+.env
+.env.backup
+docker-compose.override.yml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+composer.json
+composer.lock
+package.json
+package-lock.json

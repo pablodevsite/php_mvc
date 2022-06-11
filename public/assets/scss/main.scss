@@ -1,0 +1,205 @@
+/* -------------------------------------------------- */
+/* custom pro */
+/* -------------------------------------------------- */
+:root {
+
+    /* colors */
+    --clr-black: hsl(0, 100%, 0%);
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-primary: hsl(216, 98%, 52%);
+    --clr-secondary: hsl(208, 7%, 46%);
+  
+    /*  fonts colors */
+    --clr-font: hsl(0, 0%, 27%);
+    --clr-head: hsl(0, 0%, 24%);
+    --clr-link: var(--clr-primary);
+  
+    /* border colors */
+    --clr-border:hsl(0, 0%, 87%);
+  
+    /* backgrounds colors */
+    --clr-background: hsl(0, 0%, 100%);
+  
+  
+    /* font-sizes */
+    /*http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/*/
+    //https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.75rem;
+    --fs-h5: 1.5rem;
+    --fs-h6: 1.25rem;
+    --fs-p: 1rem;     //16px
+    --fs-small: 0.875rem; /*14px*/
+  
+    --fw-text:400;   /*font-weight text*/
+    --fw-header:700; /*font-weight header*/
+  
+  
+  
+    /* font-families */
+    --ff-header: Arial, Helvetica, sans-serif
+    --ff-text: Arial, Helvetica, sans-serif
+  
+  
+    /*misure varie*/
+    --w-container-big: 1200px;
+    --w-container : 960px;
+    --p-container: 2rem;
+    --lh-header: 1.2; /*line height header*/
+    --lh-text: 1.6; /*line height text*/
+  
+  
+    /*flex e grid*/
+    --flex-gap : 1rem;
+    --grid-gap : 1rem;
+  
+    /* transition */
+    /*
+    --transition: 0.25s ease;
+    --cubic-out: cubic-bezier(0.45, 0.85, 0.5, 1);
+    --cubic-in: cubic-bezier(0.5, 0, 0.50, 0.95);
+    */
+  
+  
+    /* radius */
+    --radius: 5px;
+  
+  
+    /* shadow */
+    --shadow-basic: 0 0.25em 1em rgb(0 0 0 / 10%);
+}
+  
+  
+/* -------------------------------------------------- */
+/* reset */
+/* -------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+/* -------------------------------------------------- */
+/* BASIC STYLE */
+/* -------------------------------------------------- */
+html
+{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: var(--lh-text);
+    font-family: var(--ff-text);
+    font-size: var(--fs-p); // 1rem
+    color: var(--clr-font);
+    background-color: var(--clr-white);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--clr-head);
+    line-height: var(--lh-header);
+    margin-bottom:16px;
+}
+
+h1 {font-size: clamp(var(--fs-h2), 1.7500rem + 3.3333vw, var(--fs-h1));font-weight: 700}
+h2 {font-size: clamp(var(--fs-h3), 1.6250rem + 1.6667vw, var(--fs-h2));font-weight: 700;}
+h3 {font-size: clamp(var(--fs-h4), 1.5625rem + 0.8333vw, var(--fs-h3));font-weight: 700;}
+h4 {font-size: clamp(var(--fs-h5), 1.3125rem + 0.8333vw, var(--fs-h4));}
+h5 {font-size: clamp(var(--fs-h6), 1.0625rem + 0.8333vw, var(--fs-h5));}
+h6 {font-size: clamp(var(--fs-p), 0.8125rem + 0.8333vw, var(--fs-h6));}
+
+p {margin-block:8px;}
+
+
+a {color: var(--clr-link);}
+a:is(:active, :focus) {
+    color:var(--clr-link);
+    text-decoration: underline;
+}
+
+input, select, textarea
+{
+    border:solid 1px var(--clr-border);
+    border-radius:6px;
+    resize: vertical;
+    padding:8px 16px;
+    outline: none;
+}
+
+:is(input, select, textarea):is(:hover, :focus)
+{
+    border:solid 1px var(--clr-primary);
+}
+
+::selection {
+    color: var(--clr-white);
+    //color: var(--clr-black);
+    background: var(--clr-primary);
+}
+
+
+
+/*
+nn: 0,     // Extra small screen / phone
+sm: 576px, // Small screen / phone
+md: 768px, // Medium screen / tablet
+lg: 992px, // Large screen / desktop
+xl: 1200px // Extra large screen / wide desktop
+*/
+
+/* -------------------------------------------------- */
+/* MIXIN */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* COMPONENTS */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* UTILITY */
+/* -------------------------------------------------- */
+
+
+/* -------------------------------------------------- */
+/* LAYOUT */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* PAGES */
+/* -------------------------------------------------- */
+
+
+
+/* -------------------------------------------------- */
+/* RESPONSIVES */
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 576px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1200px) {}

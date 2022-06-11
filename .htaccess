@@ -1,0 +1,5 @@
+# if I can't set /public as a root folder
+# this rules apply redirects inside public folder
+RewriteEngine on
+RewriteRule ^(.*)$ public/$1 [L]
+RewriteRule \.(env|json|lock|txt)$ - [F]
